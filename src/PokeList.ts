@@ -4,7 +4,13 @@ async function getlist() {
     let html = '';
     for(const pokemon of pokelist.results) {
         html += `<div>
-        <p>${pokemon.name} <button onClick="location.href='details.html?id=${pokemon.name}'">Details</button></p>
+        <table class="table table-striped">
+        <body>
+        <tr>
+        <td>${pokemon.name} <button onClick="location.href='details.html?id=${pokemon.name}'" class="btn-info">Details</button></td>
+        </tr>
+        </table>
+        
         </div>`
     }
 
